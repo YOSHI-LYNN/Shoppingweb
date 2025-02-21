@@ -6,7 +6,8 @@ import router from '@/router'
 // 创建axios实例
 const http = axios.create({
   baseURL: 'http://pcapi-xiaotuxian-front-devtest.itheima.net',
-  timeout: 5000
+  //Tips:请求数据过大时，获得的data=>undefine,也就是超时了未获得可延长Timeout
+  timeout: 50000
 })
 
 // axios请求拦截器
